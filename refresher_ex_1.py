@@ -26,8 +26,8 @@
 # Task: create a variable with your name and print out Hello <name>
 print("start of part 0") # set breakpoint here
 # your code here
-
-
+myName="Kareen Anasilvia Salazar"
+print("Hello "+myName)
 print("end of 0") # set breakpoint here 
 '''
 
@@ -108,8 +108,8 @@ print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
-
-
+X=[L[0],L[2][1],L[2][2],[L[3][0][0],L[3][1][0]],L[4][0],L[4][2]]
+print(X)
 print("end of 1") # set breakpoint here 
 '''
 
