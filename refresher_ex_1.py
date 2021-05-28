@@ -221,8 +221,17 @@ for e in sentence_list:
 # programming
 # LANGUAGE
 print("start of part 3") # set breakpoint here
+s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
-
+words=s.replace(".","").replace(",","").split(" ")
+numWords=len(words)
+printedWords=0
+while printedWords<numWords:
+    if printedWords%2 == 1:
+        print(words[printedWords].upper())
+    else:
+        print(words[printedWords])
+    printedWords+=1
 
 print("end of 3") # set breakpoint here 
 '''
