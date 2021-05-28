@@ -305,12 +305,35 @@ for w in words:
 # result would not be longer than s!
 # call your function a couple of times with different parameters and also test edge cases
 print("start of part 4") # set breakpoint here
-s = "A very long description" # a long string
-filler = "..."
+
 # your code here
+#Function to print the abbreviated sentence
+def abbr(s1, filler2, total_width):
+    abbreviation=s1[0:total_width]+filler2+s1[len(s1)-total_width:len(s1)]
+    if len(abbreviation)<len(s1):
+        print(abbreviation)
 
+#Function to print the respective abbreviation for each width
 
+def abbrLoop(longString,filler,width=15):
+    for i in range(5,width):
+        abbr(longString,filler,i)
+
+#Printing the abbreviations
+abbrLoop("A very long description","...",15)
 print("end of 4") # set breakpoint here 
+
+# Edge cases
+abbrLoop("", "...", 0)
+abbrLoop("", "...", 999)
+abbrLoop("", "", 0)
+abbrLoop("", "", 999)
+abbrLoop("test", "...", 0)
+abbrLoop("test", "...", 999)
+abbrLoop("test", "", 0)
+abbrLoop("test", "", 999)
+abbrLoop("A very long description", "....................................", 999)
+abbrLoop("A very long description", "....................................", 0)
 '''
 
 
